@@ -20,9 +20,10 @@ Assessing the Success of Foreign Aid Projects Final Report**
 The training-test split kept the test set at 20 percent of the total data, using the usual Scikitlearn train-test-split function.
 
 # 5. Modeling: 
-## I used a simple linear regression model as a baseline.  For more complex analysis, I chose a Random Forest Regressor algorithm and a Ridge regression algorithm.
+## I used a simple linear regression model as a baseline.  For more complex analysis, I chose a Random Forest Regressor algorithm and a Ridge regression algorithm.  For both the Random Forests and Ridge models, I used GridSearch CV to find optimal hyperparameters.  I used Mean Absolute Error as a accuracy measure to be consistent across the two types of algorithms and to have a measure of accuracy that would be easier to interpret.  I also generated the Out-of-Bag score for the Random Forests model.
 
 
-For this deliverable, please document your selection of machine learning algorithms that you selected for your problem statement from the first deliverable.
+Model Evaluation: 
+The baseline linear regression model generated a very low Mean Squared Error, suggesting that the model was quite accurate.  However, the coefficient values were all quite low, indicating that the features have little predictive power for the target variable (the effectiveness rating for each foreign aid project).  This aligns with the ![correlation matrix heatmap](
 
-Model Evaluation: Share your model evaluation here. What types of models did you consider for your problem (classification, regression, unsupervised)?  Articulate the evaluation metrics you used and how you determined which model was most optimal for your problem.
+Share your model evaluation here. What types of models did you consider for your problem (classification, regression, unsupervised)?  Articulate the evaluation metrics you used and how you determined which model was most optimal for your problem.
