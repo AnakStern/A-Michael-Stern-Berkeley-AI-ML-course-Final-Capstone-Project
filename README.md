@@ -16,10 +16,11 @@ Assessing the Success of Foreign Aid Projects Final Report**
 
 # 4. Data Preprocessing/Preparation: 
 ## In sum, feature engineering involved a combination of excluding certain features, ensuring features of interest were not categorical (for use with regression models), and dropping missing values and values that would make interpreting the results difficult.
-The dataset contained variables that the academic researchers had previously engineered.  Some of those variables were dropped because they heavily overlapped with information in other features or were encoded as lagged variables which were beyond the scope of the current analysis.  The target feature needed no changes other than dropping null values; it had been standardized to account for variations in the metrics used by various foreign aid donors to measure project effectiveness.   Two potentially important categorical features with information about the foreign aid donors and the sectors of the foreign aid projects (e.g., agriculture, education, health, etc.) were converted to dummy variables.
+## The dataset contained variables that the academic researchers had previously engineered.  Some of those variables were dropped because they heavily overlapped with information in other features or were encoded as lagged variables which were beyond the scope of the current analysis.  The target feature needed no changes other than dropping null values; it had been standardized to account for variations in the metrics used by various foreign aid donors to measure project effectiveness.   Two potentially important categorical features with information about the foreign aid donors and the sectors of the foreign aid projects (e.g., agriculture, education, health, etc.) were converted to dummy variables.
 The training-test split kept the test set at 20 percent of the total data, using the usual Scikitlearn train-test-split function.
 
 # 5. Modeling: 
+## I used a simple linear regression model as a baseline.  For more complex analysis, I chose a Random Forest Regressor algorithm and a Ridge regression algorithm.
 
 
 For this deliverable, please document your selection of machine learning algorithms that you selected for your problem statement from the first deliverable.
