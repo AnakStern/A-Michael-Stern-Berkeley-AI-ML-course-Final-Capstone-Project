@@ -15,12 +15,13 @@ Assessing the Success of Foreign Aid Projects Final Report**
 ## The data are from a scholarly journal article “When Does Transparency Improve Institutional Performance? Evidence from 20,000 Projects in 183 Countries”, published in the American Journal of Political Science in 2021.  The data are publicly [available here](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi%3A10.7910%2FDVN%2FJQGLHX&version=&q=&fileAccess=&fileTag=&fileSortField=&fileSortOrder=&tagPresort=true&folderPresort=true) and used with the permission of the article's lead author Professor Dan Honig.  Though the study uses a single dataset, the data come from a range of sources such as the World Bank, various international foreign aid donor organizations, and others.  The data are also the most complete dataset I could identify that contains a reliable measure of project effectiveness in addition to a range of other features with potential impacts on project effectiveness.  The plot showing that the target feature is continuous is ![here](https://path-to-image.png](https://github.com/AnakStern/A-Michael-Stern-Berkeley-AI-ML-course-Final-Capstone-Project/blob/main/target_histogram.jpg).  Though there are other datasets with information about foreign aid projects, major disparities across data file structures and data collection methods make merging different datasets highly laborious.  Therefore, this work will rely on the single dataset identified above. 
 
 # 4. Data Preprocessing/Preparation: 
+## In sum, feature engineering involved a combination of excluding certain features, ensuring features of interest were not categorical (for use with regression models), and dropping missing values and values that would make interpreting the results difficult.
+The dataset contained variables that the academic researchers had previously engineered.  Some of those variables were dropped because they heavily overlapped with information in other features or were encoded as lagged variables which were beyond the scope of the current analysis.  The target feature needed no changes other than dropping null values; it had been standardized to account for variations in the metrics used by various foreign aid donors to measure project effectiveness.   Two potentially important categorical features with information about the foreign aid donors and the sectors of the foreign aid projects (e.g., agriculture, education, health, etc.) were converted to dummy variables.
+The training-test split kept the test set at 20 percent of the total data, using the usual Scikitlearn train-test-split function.
 
-For this deliverable, you are tasked with detailing how you cleaned the data for your notebook. 
-What techniques did you use to ensure your data was free of missing values, and inconsistencies? 
-How did you split the data into training and test sets?
-Please include any necessary analysis and encoding steps you took as well.
+# 5. Modeling: 
 
-Modeling: For this deliverable, please document your selection of machine learning algorithms that you selected for your problem statement from the first deliverable.
+
+For this deliverable, please document your selection of machine learning algorithms that you selected for your problem statement from the first deliverable.
 
 Model Evaluation: Share your model evaluation here. What types of models did you consider for your problem (classification, regression, unsupervised)?  Articulate the evaluation metrics you used and how you determined which model was most optimal for your problem.
